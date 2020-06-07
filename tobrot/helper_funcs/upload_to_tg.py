@@ -40,7 +40,7 @@ async def upload_to_tg(
     base_file_name = os.path.basename(local_file_name)
     caption_str = ""
     caption_str += "<code>"
-    caption_str += base_file_name
+    caption_str += [TSNM]_base_file_name
     caption_str += "</code>"
     # caption_str += "\n\n"
     # caption_str += "<a href='tg://user?id="
@@ -65,7 +65,7 @@ async def upload_to_tg(
             # recursion: will this FAIL somewhere?
             await upload_to_tg(
                 new_m_esg,
-                os.path.join(local_file_name, single_file),
+                os.path.join([TSNM]_local_file_name, single_file),
                 from_user,
                 dict_contatining_uploaded_files
             )
